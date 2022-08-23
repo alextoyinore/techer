@@ -1,0 +1,661 @@
+/*
+Theme Name: Techer
+Text Domain: techer
+Version: 1.1.1
+Description: Block-based versatile magazine theme for news, science, lifestyle, and more
+Tag: news, magazine, responsive
+Author: Alexander Ore
+Author URI: https://9african.live/about-us
+*/
+
+@font-face {
+    font-family: "NeueHaasGroteskText Pro", sans-serif;
+    src: url("/assets/fonts/Neue-Haas-Grotesk-Pro-Bd.ttf"),
+    url("/assets/fonts/Neue-Haas-Grotesk-Pro-Md.ttf"),
+    url("/assets/fonts/Neue-Haas-Grotesk-Pro-Rg.ttf");
+}
+
+body {
+    font-family: "NeueHaasGroteskText Pro", sans-serif;
+    overflow-x: hidden;
+}
+
+hr {
+    margin-top: .01rem;
+    margin-bottom: .01rem;
+     opacity: .5;
+}
+
+ul {
+    display: block;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+blockquote {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 1rem;
+}
+
+a{
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+article a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline dotted;
+    /* opacity: .7;*/
+}
+
+::selection{
+    background: #FFDE17;
+    color: #000;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+#header {
+    width: 100%;
+    border-bottom: 1px solid #aaa;
+    background: #fff;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+#techer-menu-icon-left {
+    width: 1.5rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.tc-site-title {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.tc-nav {
+    width: 55%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2rem;
+    border: none;
+    padding: 0.5rem;
+    align-items: center;
+    clear: both;
+}
+
+#techer-top-nav {
+    grid-template-columns: 1.5rem auto auto;
+}
+
+.tc-nav .tc-site-brand img {
+    height: 2rem;
+}
+
+/* Primary Nav */
+#primary-nav-links {
+    float: left;
+}
+
+#primary-nav-links ul ul {
+    background: #000;
+    opacity: .8;
+    padding: .3rem;
+    border-radius: .5rem;
+}
+
+#primary-nav-links ul li:hover > ul {
+    display: block;
+    position: absolute;
+    z-index: 999;
+}
+
+#primary-nav-links ul ul li a{
+    color: #fff;
+    line-height: 1.5rem;
+}
+
+#primary-nav-links ul ul {
+    display: none;
+}
+
+#primary-nav-links ul li{
+    float: left;
+    margin-right: 1rem;
+    position: relative;
+}
+
+#primary-nav-links ul li a{
+    color: #000;
+    text-decoration: none;
+}
+
+#primary-nav-links ul li a:hover{
+    text-decoration: underline dotted;
+}
+
+/* Primary Nav End */
+
+/* Secondary Nav */
+
+#secondary-nav-links ul ul {
+    display: none;
+}
+
+#secondary-nav-links ul li{
+    float: left;
+    margin-right: 1rem;
+}
+
+#secondary-nav-links ul li a{
+    color: #000;
+    text-decoration: none;
+}
+
+#secondary-nav-links ul li a:hover {
+    text-decoration: underline dotted;
+}
+
+/* Secondary Nav Ends */
+
+
+/* Big Site Nav */
+
+#techer-site-navigation {
+    display: none;
+}
+
+#techer-site-navigation {
+    width: 100%;
+}
+
+#techer-site-navigation div {
+    width: 55%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    min-height: 20rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#techer-site-navigation div li a{
+    color: #000;
+    font-size: 1.2rem;
+}
+
+#techer-site-navigation div ul li a{
+    color: #555;
+    font-size: .9rem;
+}
+
+/* Big Site Nav Ends */
+
+#techer-search-icon {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    float: right;
+}
+
+/*Search form*/
+
+#techer-search-form {
+    display: none;
+}
+
+#techer-search-form {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: .5rem;
+    background: #fff;
+    z-index: 2;
+    top: 3.3rem;
+    border-bottom: 1px solid #aaa;
+}
+
+#techer-search-input {
+    width: 100%;
+    border: 0;
+    font-size: 1.5em;
+    line-height: 1.5rem;
+    padding: .5rem;
+    opacity: .8;
+    color: #000;
+    text-align: center;
+}
+
+.techer-input::placeholder {
+    color: #888;
+}
+
+/* 3-Column Widget */
+
+.content {
+    width: 55%;
+    margin: auto;
+}
+
+.tc-3-col-widget {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: 2rem;
+    column-gap: 2rem;
+}
+
+.techer-column-block article {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.tc-title {
+    font-size: 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.tc-excerpt {
+    font-size: .9rem;
+    line-height: 1.4rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.tc-author {
+    text-decoration: none;
+    color: #888;
+}
+
+.tc-time {
+    text-decoration: none;
+    color: #888;
+    font-size: .9rem;
+}
+
+/* Techer List Block */
+
+.techer-list-block article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.techer-list-block article p .tc-title{
+    font-size: 1.6em;
+    line-height: 2rem;
+}
+
+
+.techer-list-block article p .tc-author {
+    margin-right: 1rem;
+}
+
+.techer-list-block article img {
+    width: 100%;
+    margin-top: 1.5rem;
+    object-fit: cover;
+    max-height: 16rem;
+}
+
+
+/* 4 Article Row  */
+
+.techer-row-block-1 article {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 2rem;
+}
+
+
+.tc-category {
+    text-decoration: none;
+    color: #888;
+    font-size: .9rem;
+}
+
+/* 3-Column Block */
+
+.tc-3-column-block {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 2rem;
+}
+
+.col-0 {
+    width: 100%;
+}
+
+.col-0 article {
+    margin-right: 50px;
+    margin-bottom: 10px;
+    /* border-bottom: 1px dashed #ccc; */
+    padding-bottom: 20px;
+}
+
+.tc-1-column-list {
+   width: 25%;
+}
+
+
+.small {
+   text-decoration: none;
+   font-size: 14px;
+   color: #000;
+   line-height: 12px;
+}
+
+.small:hover {
+    text-decoration: underline;
+}
+
+
+/* 1 row thumbnail block*/
+
+.techer-row-block-2 article {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 2rem;
+}
+
+.techer-row-block-2 article img{
+    width: 100%;
+    height: 11rem;
+    object-fit: cover;
+}
+
+
+/* Big thumbnail block 2 */
+
+.techer-featured-block-2 article{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2rem;
+}
+
+.techer-featured-block-2 article img{
+    width: 100%;
+    max-height: 33rem;
+    object-fit: cover;
+}
+
+.techer-featured-block-2 article .title{
+    text-decoration: none;
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+}
+
+/* Single article */
+.tc-article {
+    width: 55%;
+    margin: auto;
+}
+
+.tc-article img {
+    width: 100%;
+    max-height: 30rem;
+    object-fit: cover;
+}
+
+.tc-headline {
+    font-size: 2.3rem;
+    line-height: 2.9rem;
+    border: 1px solid #000;
+    padding: 1.4rem;
+}
+
+.tc-tags a{
+    color: #555;
+}
+
+.tc-post-meta, .tc-post-meta{
+    text-decoration: none;
+    color: #555;
+    font-size: .8rem;
+}
+
+.tc-article-post-nav {
+    display: flex;
+}
+
+.tc-article-post-nav strong {
+    width: 50%;
+    /* border: 1px solid #000; 
+    padding: 5px; */
+}
+
+.tc-article article p{
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+
+.tc-article article p a {
+    color: #000;
+    font-style: bold;
+    text-decoration-style: dotted;
+    text-decoration-color: #aaa;
+}
+
+.tc-article article blockquote {
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+    text-align: center;
+    font-size: 2rem;
+    font-style: oblique;
+    /*background: #F4E63733;*/
+}
+
+.tc-article article cite {
+    font-size: .8rem;
+    color: #888;
+}
+
+.tc-article article ul li {
+    list-style: none;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+.tc-article article ul li a {
+    color: #000;
+    /* font-style: italic; 
+    text-decoration-style: dotted; 
+    text-decoration-color: #aaa; */
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+
+/* Next Post Link */
+
+.tc-post-nav a{
+    text-decoration: none;
+    color: #000;
+    line-height: 1.5rem;
+}
+
+.left{
+    margin-right: 10%;
+}
+
+.right {
+    margin-left: 10%;
+    text-align: right;
+}
+
+.center-nav {
+    /* width: 50%;
+    margin: auto; */
+    padding: .5rem;
+}
+
+
+/* Archive Grid */
+
+.tc-archive-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 2.5rem;
+    column-gap: 2.5rem;
+}
+
+.tc-archive-grid img {
+    width: 100%;
+    max-height: 12rem;
+    object-fit: cover;
+}
+
+/* Techer Related Block */
+.techer-related-section {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: auto;
+    column-gap: 2rem;
+}
+
+
+/* Techer Grid Block */
+.techer-grid-block {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 12.5rem;
+    column-gap: 12.5rem;
+}
+
+.techer-grid-block img {
+    width: 100%;
+    max-height: 12rem;
+}
+
+.more, .more a{
+    font-size: .7rem;
+    color: #000;
+}
+
+.more {
+    /* border-top: 1px solid #888;
+    border-bottom: 1px solid #888; */
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+}
+
+
+/* Comments */
+
+.tc-comment {
+    width: 55%;
+    margin: auto;
+}
+
+.vcard img {
+    display: none;
+}
+
+.vcard cite {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.vcard .says {
+    display: none;
+}
+
+.comments-title {
+    border: 1px solid #000;
+    padding: .3rem;
+}
+
+.comment-meta .comment-edit-link, .comment-meta a {
+    color: #555;
+    font-size: small;
+}
+
+.comment-body {
+    margin-bottom: 1rem;
+}
+
+.comment-body p {
+    font-size: .9rem;
+    padding-block-start: 0;
+    padding-block-end: 0;
+}
+
+.comment-body .reply {
+    font-size: small;
+}
+
+
+.wp-block-columns {
+    margin-bottom: 0.75em;
+}
+
+/* Fixed top margin */
+.content, .tc-article {
+    margin-top: 3rem;
+}
+
+
+/* Techer Weather */
+.techer-weather {
+    color: #888;
+    font-size: .9rem;
+}
+
+
+/* Techer Social Share */
+.tc-social-share{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tc-social-share div{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    row-gap: .5rem;
+    color: #555;
+}
+
+.tc-social-share div a{}
+
+.tc-social-share-label {
+    /*font-weight: bold;*/
+}
+
+/* Techer Copyright */
+#tc-copyright{
+    font-size: .8rem;
+    color: #555;
+    width: 55%;
+    margin: auto;
+}

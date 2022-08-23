@@ -1,0 +1,899 @@
+/* Mobile */
+
+@media screen and (max-width: 1920px) {
+
+    .content {
+        width: 55%;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    .tc-article {
+        margin-top: 3rem;
+    }
+
+    #techer-top-nav {
+        grid-template-columns: 1.5rem 150px auto;
+    }
+
+    .tc-nav {
+        width: 55%;
+        margin: auto;
+        grid-template-columns: 200px auto;
+        display: grid;
+        row-gap: 1rem;
+        border: none;
+        align-items: center;
+    }
+
+    .techer-featured-block-2 article img {
+        width: 100%;
+        max-height: 27rem;
+    }
+
+    .techer-row-block-2 article img {
+        width: 100%;
+        height: 9rem;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .content {
+        width: 75%;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    /* Techer Copyright */
+    #tc-copyright{
+        width: 75%;
+    }
+
+    #techer-site-navigation div {
+        width: 75%;
+    }
+
+    .tc-article {
+        margin-top: 3rem;
+    }
+
+    #techer-top-nav {
+        grid-template-columns: 1.5rem 180px auto;
+    }
+
+    .tc-nav {
+        width: 75%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 1rem;
+        border: none;
+        align-items: center;
+    }
+
+    .techer-featured-block-2 article img {
+        width: 100%;
+        max-height: 27rem;
+    }
+
+    .techer-row-block-2 article img {
+        width: 100%;
+        height: 9rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .content {
+        width: 80%;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    /* Techer Copyright */
+    #tc-copyright{
+        width: 80%;
+    }
+
+    #techer-site-navigation div {
+        width: 80%;
+    }
+
+    .tc-article{
+        margin-top: 3rem;
+    }
+
+    #footer-nav {
+        grid-template-columns: auto auto;
+    }
+
+    .tc-nav {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1.5rem auto auto;
+        row-gap: 1rem;
+        border: none;
+        align-items: center;
+    }
+
+    .techer-featured-block-2 article img {
+        width: 100%;
+        max-height: 27rem;
+    }
+
+    .techer-row-block-2 article img {
+        width: 100%;
+        height: 9rem;
+    }
+}
+
+
+@media screen and (max-width: 1366px) {
+    .content {
+        width: 80%;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    /* Techer Copyright */
+    #tc-copyright{
+        width: 80%;
+    }
+
+    .tc-article{
+        margin-top: 3rem;
+    }
+
+    #techer-top-nav {
+        grid-template-columns: 1.5rem 180px auto;
+    }
+
+    #techer-site-navigation div {
+        width: 80%;
+    }
+
+    .tc-nav {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 1rem;
+        border: none;
+        align-items: center;
+    }
+
+    .techer-featured-block-2 article img {
+        width: 100%;
+        max-height: 27rem;
+    }
+
+    .techer-row-block-2 article img {
+        width: 100%;
+        height: 9rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .content {
+        width: 90%;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    /* Techer Copyright */
+    #tc-copyright{
+        width: 90%;
+    }
+
+    .tc-article{
+        margin-top: 3rem;
+    }
+
+    #techer-site-navigation div {
+        width: 90%;
+    }
+
+    #footer-nav{
+        grid-template-columns: auto auto;
+    }
+
+    .tc-nav {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1.5rem auto auto;
+        row-gap: 1rem;
+        border: none;
+        align-items: center;
+    }
+
+    .techer-featured-block-2 article img {
+        width: 100%;
+        max-height: 27rem;
+    }
+
+    .techer-row-block-2 article img {
+        width: 100%;
+        height: 9rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+        width: 90%;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    /* Techer Copyright */
+    #tc-copyright{
+        width: 90%;
+    }
+
+    .tc-article{
+        margin-top: 3rem;
+    }
+
+    #techer-site-navigation div {
+        width: 95%;
+    }
+
+    #techer-top-nav {
+        grid-template-columns: 1.5rem 180px auto;
+    }
+
+    #techer-site-navigation div {
+        width: 90%;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .tc-nav {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 1rem;
+        border: none;
+        align-items: center;
+    }
+
+    .techer-featured-block-2 article img {
+        width: 100%;
+        max-height: 27rem;
+    }
+
+    .techer-row-block-2 article img {
+        width: 100%;
+        height: 9rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: 95%;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    /* Techer Copyright */
+    #tc-copyright{
+        width: 95%;
+    }
+
+    .tc-article{
+        margin-top: 3rem;
+    }
+
+    #techer-top-nav {
+        grid-template-columns: 1.5rem 180px auto;
+    }
+
+    #footer-nav {
+        grid-template-columns: auto;
+    }
+
+    #techer-site-navigation div {
+        width: 95%;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .tc-nav {
+        width: 95%;
+        margin: auto;
+        grid-template-columns: auto auto;
+    }
+
+    .tc-article {
+        width: 100%;
+    }
+
+    .tc-archive-grid img {
+        max-height: 9rem;
+    }
+
+    .techer-row-block-2 article img {
+        height: 7rem;
+    }
+
+    .techer-featured-block-2 article img {
+        width: 100%;
+        max-height: 15rem;
+    }
+}
+
+/* iPhone 6/7/8 Plus  */
+@media screen and (max-width: 540px){
+    .content {
+        width: 95%;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    /* Techer Copyright */
+    #tc-copyright{
+        width: 95%;
+    }
+
+    .tc-article{
+        margin-top: 3rem;
+    }
+
+    #techer-top-nav {
+        grid-template-columns: 1.5rem 180px auto;
+    }
+
+    #footer-nav {
+        grid-template-columns: auto;
+    }
+
+    #techer-site-navigation div {
+        width: 95%;
+        grid-template-columns: auto auto;
+    }
+
+    .tc-nav {
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 1rem;
+        border: none;
+        align-items: center;
+    }
+
+    .tc-nav #primary-nav-links {
+        display: none;
+    }
+
+    .tc-article {
+        width: 100%;
+        margin: auto;
+    }
+
+    .tc-article img {
+        width: 100%;
+        max-height: 26rem;
+    }
+
+    .tc-headline {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        border: 1px solid #000;
+        padding: 1rem;
+    }
+
+    .tc-archive-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: .5rem;
+        column-gap: .5rem;
+    }
+
+    /* Techer List Block */
+
+    .techer-list-block article img {
+        width: 100%;
+        height: 9rem;
+    }
+
+    .techer-list-block article {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 1rem;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .techer-list-block article p .tc-title {
+        font-size: 1.6em;
+        line-height: 1.8rem;
+    }
+
+
+    /* Techer Row Block 1 */
+
+    .techer-row-block-1 article {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: .5rem;
+        row-gap: .5rem;
+    }
+
+
+    /* Techer Row Block 2 */
+
+    .techer-row-block-2 article {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 1rem;
+    }
+
+    .techer-row-block-2 article img {
+        width: 100%;
+        height: 10rem;
+    }
+
+    /* Techer Featured Block 2 */
+
+    .techer-featured-block-2 article {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 1rem;
+        width: 100%;
+    }
+    
+
+    .techer-featured-block-2 article img {
+        width: 100%;
+        max-height: 22rem;
+    }
+
+    .tc-social-share div{
+        grid-template-columns: auto auto auto;
+    }
+
+}
+
+/* iPhone 6/7/8 Plus  */
+@media screen and (max-width: 414px){
+    .content {
+        width: 95%;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    .tc-article{
+        margin-top: 3rem;
+    }
+
+    #techer-top-nav {
+        grid-template-columns: 1.5rem 180px auto;
+    }
+
+    #footer-nav {
+        grid-template-columns: auto;
+    }
+
+    #techer-site-navigation div {
+        width: 95%;
+        grid-template-columns: auto auto;
+    }
+
+    .tc-nav {
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 1rem;
+        border: none;
+        align-items: center;
+    }
+
+    .tc-nav #primary-nav-links {
+        display: none;
+    }
+
+    .tc-article {
+        width: 100%;
+        margin: auto;
+    }
+
+    .tc-article img {
+        width: 100%;
+        max-height: 13rem;
+    }
+
+    .tc-headline {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        border: 1px solid #000;
+        padding: 1rem;
+    }
+
+    .tc-archive-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: .5rem;
+        column-gap: .5rem;
+    }
+
+    /* Techer List Block */
+
+    .techer-list-block article img {
+        width: 100%;
+        height: 6rem;
+    }
+
+    .techer-list-block article {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 1rem;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .techer-list-block article p .tc-title {
+        font-size: 1.6em;
+        line-height: 1.8rem;
+    }
+
+
+    /* Techer Row Block 1 */
+
+    .techer-row-block-1 article {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 1rem;
+        row-gap: .1rem;
+    }
+
+
+    /* Techer Row Block 2 */
+
+    .techer-row-block-2 article {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 1rem;
+    }
+
+    .techer-row-block-2 article img {
+        width: 100%;
+        height: 8rem;
+    }
+
+    /* Techer Featured Block 2 */
+
+    .techer-featured-block-2 article {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 1rem;
+        width: 100%;
+    }
+    
+
+    .techer-featured-block-2 article img {
+        width: 100%;
+        max-height: 13rem;
+    }
+
+    .tc-social-share div{
+        grid-template-columns: auto auto auto;
+    }
+
+}
+
+/* iPhone 6/7/8  */
+@media screen and (max-width: 375px){
+    .content {
+        width: 95%;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    /* Techer Copyright */
+    #tc-copyright{
+        width: 95%;
+    }
+
+    .tc-article{
+        margin-top: 3rem;
+    }
+
+    #techer-top-nav {
+        grid-template-columns: 1.5rem 180px auto;
+    }
+
+    #footer-nav {
+        grid-template-columns: auto;
+    }
+
+    #techer-site-navigation div {
+        width: 95%;
+        grid-template-columns: auto auto;
+        height: auto;
+    }
+
+    .tc-nav {
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 1rem;
+        border: none;
+    }
+
+    .tc-nav #primary-nav-links {
+        display: none;
+    }
+
+    .tc-article {
+        width: 100%;
+        margin: auto;
+    }
+
+    .tc-article img {
+        width: 100%;
+        max-height: 13rem;
+    }
+
+
+    .tc-headline {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        border: 1px solid #000;
+        padding: 1rem;
+    }
+
+    .tc-archive-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: .5rem;
+        column-gap: .5rem;
+    }
+
+    /* Techer List Block */
+
+    .techer-list-block article img {
+        width: 100%;
+        height: 6rem;
+    }
+
+    .techer-list-block article {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 1rem;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .techer-list-block article p .tc-title {
+        font-size: 1.6em;
+        line-height: 1.8rem;
+    }
+
+
+    /* Techer Row Block 1 */
+
+    .techer-row-block-1 article {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 1rem;
+        row-gap: .1rem;
+    }
+
+
+    /* Techer Row Block 2 */
+
+    .techer-row-block-2 article {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 1rem;
+    }
+
+    .techer-row-block-2 article img {
+        width: 100%;
+        height: 8rem;
+    }
+
+    /* Techer Featured Block 2 */
+
+    .techer-featured-block-2 article {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 1rem;
+        width: 100%;
+    }
+
+
+
+    .techer-featured-block-2 article img {
+        width: 100%;
+        max-height: 13rem;
+    }
+
+    .tc-social-share div{
+        grid-template-columns: auto auto auto;
+    }
+
+
+}
+
+/* iPhone 5/SE  */
+@media screen and (max-width: 320px){
+    .content {
+        width: 95%;
+        margin: auto;
+        margin-top: 3rem;
+    }
+
+    /* Techer Copyright */
+    #tc-copyright{
+        width: 95%;
+    }
+
+    .tc-article{
+        margin-top: 3rem;
+    }
+
+    #techer-top-nav {
+        grid-template-columns: 1.5rem 180px auto;
+    }
+
+    #footer-nav {
+        grid-template-columns: auto;
+    }
+
+    #techer-site-navigation div {
+        width: 100%;
+        grid-template-columns: auto auto;
+    }
+
+    .tc-nav {
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 1rem;
+        border: none;
+        align-items: center;
+    }
+
+    .tc-nav #primary-nav-links {
+        display: none;
+    }
+
+    .tc-article {
+        width: 100%;
+        margin: auto;
+    }
+
+    .tc-article img {
+        width: 100%;
+        max-height: 13rem;
+    }
+
+
+    .tc-headline {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        border: 1px solid #000;
+        padding: 1rem;
+    }
+
+    .tc-archive-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: .5rem;
+        column-gap: .5rem;
+    }
+
+    /* Techer List Block */
+
+    .techer-list-block article img {
+        width: 100%;
+        height: 6rem;
+    }
+
+    .techer-list-block article {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 1rem;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .techer-list-block article p .tc-title {
+        font-size: 1.6em;
+        line-height: 1.8rem;
+    }
+
+
+    /* Techer Row Block 1 */
+
+    .techer-row-block-1 article {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 1rem;
+        row-gap: .1rem;
+    }
+
+
+    /* Techer Row Block 2 */
+
+    .techer-row-block-2 article {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 2rem;
+    }
+
+    /* Techer Featured Block 2 */
+
+    .techer-featured-block-2 article {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 2rem;
+        width: 100%;
+    }
+
+    .techer-featured-block-2 article img {
+        width: 100%;
+        max-height: 13rem;
+    }
+
+    .tc-social-share div{
+        grid-template-columns: auto auto;
+    }
+
+}
+
+
+@media screen and (max-width: 280px) {
+    .techer-row-block-2 article img {
+        width: 100%;
+        height: 6rem;
+    }
+
+    .content {
+        margin-top: 3rem;
+    }
+
+    .tc-article{
+        margin-top: 3rem;
+    }
+
+    #techer-site-navigation div {
+        width: 95%;
+        grid-template-columns: auto auto;
+    }
+
+
+    /* Techer Copyright */
+    #tc-copyright{
+        width: 95%;
+    }
+
+    #techer-top-nav {
+        grid-template-columns: 1.5rem 180px auto;
+    }
+
+    #footer-nav {
+        grid-template-columns: auto;
+    }
+
+    .tc-nav {
+        grid-template-columns: auto auto;
+    }
+
+    .techer-featured-block-2 article img {
+        width: 100%;
+        max-height: 13rem;
+    }
+
+    .techer-row-block-1 article {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: .5rem;
+        row-gap: .5rem;
+    }
+
+    .tc-social-share div{
+        grid-template-columns: auto auto;
+    }
+}
+
