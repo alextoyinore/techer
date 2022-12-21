@@ -1,6 +1,6 @@
 <?php get_header(); ?>  
   <br><br>
-    <article class="content">
+    <article class="content tc-article">
 
     <?php
         if(have_posts()) {
