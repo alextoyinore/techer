@@ -4,6 +4,7 @@
  * */
 
 import './block/techer-column-block/index';
+import './block/techer-column-block-2/index';
 import './block/techer-list-block/index';
 import  './block/techer-row-block-1/index';
 import  './block/techer-row-block-2/index';

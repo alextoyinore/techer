@@ -144,6 +144,159 @@ class Techer_Column_Block extends WP_Widget {
  
 $techer_column_block = new Techer_Column_Block();
 
+
+/**
+ * Techer Column Block 2
+ */
+
+ class Techer_Column_Block_2 extends WP_Widget {
+ 
+    /**
+     * Register widget with WordPress.
+     */
+
+    public function __construct() {
+        $widget_options = array(
+            'classname' => 'techer-column-block-2',
+            'description' => 'A single column list of posts with thumbnail'
+        );
+        // actual widget processes
+        parent::__construct(
+            'techer_column_block_2',
+            'Techer Column Block 2',
+            $widget_options
+        );
+
+        add_action( 'widgets_init', function() {
+            register_widget( 'Techer_Column_Block_2' );
+        });
+    }
+
+    
+    public $args = array(
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+        'before_widget' => '<section>',
+        'after_widget'  => '</section>'
+    );
+ 
+
+    public function widget( $args, $instance ) {
+        // outputs the content of the widget
+        echo $args['before_widget'];
+
+        $terms = ''; $number_of_posts = 0; $offset = 0;
+
+        if( ! empty($instance['terms'])){
+            $terms = $instance['terms'];
+        }
+
+        if( ! empty($instance['number_of_posts'])){
+            $number_of_posts = (int)$instance['number_of_posts'];
+        }
+
+        if( ! empty($instance['offset'])){
+            $offset = (int)$instance['offset'];
+        }
+
+        //echo $number_of_posts; echo $offset; echo $terms;
+
+        //The Query
+        $the_query = new WP_Query( array('category_name' => $terms, 'posts_per_page' => $number_of_posts, 'offset' => $offset) );
+
+
+        // The Loop
+        if ( $the_query->have_posts() ) {
+
+            if ( ! empty( $instance['title'] ) ) {
+                echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'] . '<hr>';
+            }
+
+            while ( $the_query->have_posts() ) {
+                $the_query->the_post(); ?>
+
+                <article><p>
+
+                <?php
+                $categories = get_the_category();
+                if(!empty($categories)){
+                    ?>
+                    <a class="tc-category" href="<?php echo site_url().'/category/'.strtolower($categories[0]->name); ?> "><?php echo $categories[0]->name; ?></a><br>
+                <?php } ?>
+
+                <div class="tc-column-block-row">
+                    <a href="<?php the_permalink(); ?>" class="tc-column-block-thumbnail"><?php the_post_thumbnail(); ?></a>
+                    <a href="<?php the_permalink(); ?>" class="tc-title"><?php the_title(); ?></a>
+                </div>
+                
+                </p></article><hr>
+            
+            <?php
+            } ?>
+
+            <section class="more"> MORE FROM
+                <a class="tc-category" href="<?php echo site_url().'/category/'.strtolower($categories[0]->name); ?> "><?php echo strtoupper($categories[0]->name); ?></a>
+            </section>
+
+        <?php    
+        } else {
+            echo _e( 'No post matches your query', 'techer' );
+        }
+        /* Restore original Post Data */
+        wp_reset_postdata();
+
+ 
+        echo $args['after_widget'];
+    }
+ 
+    public function form( $instance ) {
+        // outputs the options form in the admin
+        if(!empty($instance)) {
+            $title = $instance['title'];
+            $terms = $instance['terms'];
+            $number_of_posts = $instance['number_of_posts'];
+            $offset = $instance['offset'];
+        }else{
+            $title = '';
+            $terms = '';
+            $number_of_posts = 0;
+            $offset = 0;
+        }
+
+        ?>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('title'); ?>">Title</label>
+            <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" type="text" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('terms'); ?>">Terms</label>
+            <input class="widefat" id="<?php echo $this->get_field_id('terms'); ?>" name="<?php echo $this->get_field_name('terms'); ?>" value="<?php echo $terms; ?>" type="text" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('number_of_posts'); ?>">Number of posts</label>
+            <input class="widefat" id="<?php echo $this->get_field_id('number_of_posts'); ?>" name="<?php echo $this->get_field_name('number_of_posts'); ?>" value="<?php echo $number_of_posts; ?>" type="text" />
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('offset'); ?>">Posts offset</label>
+            <input class="widefat" id="<?php echo $this->get_field_id('offset'); ?>" name="<?php echo $this->get_field_name('offset'); ?>" value="<?php echo $offset; ?>" type="text" />
+        </p>
+        <?php
+    }
+ 
+    public function update( $new_instance, $old_instance ) {
+        // processes widget options to be saved
+        $instance = $old_instance;
+        $instance['title'] = $new_instance['title'];
+        $instance['terms'] = $new_instance['terms'];
+        $instance['number_of_posts'] = $new_instance['number_of_posts'];
+        $instance['offset'] = $new_instance['offset'];
+        return $instance;
+    }
+}
+ 
+$techer_column_block_2 = new Techer_Column_Block_2();
+
 class Techer_List_Block extends WP_Widget {
  
     /**

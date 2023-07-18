@@ -42,6 +42,7 @@
 
  add_action( 'init', 'techer_gutenberg_default_colors');
 
+
 /* Techer Column Block */
  function techer_column_block(){
      wp_enqueue_script(
@@ -125,6 +126,97 @@
 
      return $content;
  }
+
+
+/* Techer Column Block 2 */
+ function techer_column_block_2(){
+     wp_enqueue_script(
+         'techer-column-block-2-js',
+         get_template_directory_uri()."/build/index.js",
+         array('wp-blocks', 'wp-components', 'wp-block-editor', 'wp-editor'),
+         filemtime(get_template_directory().'/build/index.js'));
+
+     register_block_type(
+         'techer/tc-column-block-2',
+         [
+             'editor-script' => 'techer-column-block-2-js',
+             'render_callback' => 'techer_column_block_2_render',
+
+             //custom-attributes
+             'attributes' => [
+                    'title' => [ 'type' => 'string', 'default' => ''],
+
+                    'terms' => [ 'type' => 'array', 'default' => []],
+
+                    'numberOfPosts' => [ 'type' => 'number', 'default' => 0],
+
+                    'offset' => [ 'type' => 'number', 'default' => 0],
+
+                    'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFF00']
+             ]
+         ]
+     );
+ }
+
+ add_action('init', 'techer_column_block_2');
+
+ function techer_column_block_2_render ($attr): string
+ {
+     $content = '';
+
+     $title = $attr['title'];
+     $terms = $attr['terms'];
+     $number_of_posts = $attr['numberOfPosts'];
+     $offset = $attr['offset'];
+     $background_color = $attr['backgroundColor'];
+
+
+     //The Query
+     $the_query = new WP_Query( array('category_name' => $terms, 'posts_per_page' => $number_of_posts, 'offset' => $offset) );
+
+     $content  .= '<section class="techer-column-block" style="padding: 1rem; background-color: '.$background_color.'; ">';
+
+     if(!empty($title)){
+         $content .= '<h3>' . $title . '</h3><hr>';
+     }
+
+     // The Loop
+     if ( $the_query->have_posts() ) {
+
+         while ( $the_query->have_posts()) {
+             $the_query->the_post();
+
+             $content .= '<article><p>';
+
+             $categories = get_the_category();
+             if(!empty($categories)){
+                 $content .= '<a class="tc-category more" href="'. site_url().'/category/'.strtolower($categories[0]->name) .'">'. strtoupper($categories[0]->name) .'</a><br>';
+             }
+			 
+			 $content .= '<div class="tc-column-block-row">';
+			 
+			 $content .= '<a class="tc-column-block-thumbnail" href="'.get_the_permalink().'">'.get_the_post_thumbnail().'</a>';
+
+             $content .= '<a class="tc-title" href="'.get_the_permalink().'">'.get_the_title().'</a></div>';
+
+             $content .= '</p></article><hr>';
+         }
+
+         $content .= '<section class="more"><a class="tc-category" href="'. site_url().'/category/'.strtolower($categories[0]->name) .'">MORE FROM '. strtoupper($categories[0]->name) .'</a> </section>';
+
+     }else {
+         $content .= 'No post matches your query';
+     }
+
+     /* Restore original Post Data */
+     wp_reset_postdata();
+
+     $content .= '</section><br><br>';
+
+     return $content;
+ }
+
+
 
 /* Techer List Block */
 function techer_list_block(){
