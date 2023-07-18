@@ -1,7 +1,7 @@
 /*
 Theme Name: Techer
 Text Domain: techer
-Version: 1.1.1
+Version: 1.1.2
 Description: Block-based versatile magazine theme for news, science, lifestyle, and more
 Tag: news, magazine, responsive
 Author: Alexander Ore
@@ -275,6 +275,15 @@ input:focus, textarea:focus, select:focus{
     grid-template-rows: auto;
 }
 
+.techer-column-block article .tc-column-block-row {
+    display: flex;
+    width: 100%;
+}
+
+.tc-column-block-thumbnail{
+    max-height: 60%;
+}
+
 .tc-title {
     font-size: 15px;
     text-decoration: none;
@@ -468,7 +477,7 @@ input:focus, textarea:focus, select:focus{
 .tc-article article p{
     font-size: 1rem;
 	color: #444;
-    line-height: 1.9rem;
+    line-height: 1.4rem;
 }
 
 

@@ -49,13 +49,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 if(has_custom_logo()){
                     ?>
                         <!-- Site Logo -->
-                    <a class="tc-site-title" href="<?php echo site_url( ); ?>"><img src="<?php echo $logo[0]; ?>"
+                    <a class="tc-site-title" 
+                    href="<?php echo site_url( ); ?>"><img src="<?php echo $logo[0]; ?>"
                                                                                   alt="logo"></a>
                     <?php
                 }else {
                     ?>
                         <!-- Site title -->
-                    <a class="tc-site-title" href="<?php echo site_url(); ?>"><?php echo bloginfo('name'); ?></a> <br>
+                    <a class="tc-site-title" 
+                    href="<?php echo site_url(); ?>"><?php echo bloginfo('name'); ?></a> <br>
                     <!-- Site description -->
                     <span><?php echo bloginfo( 'description' ); ?></span>
                     <?php
