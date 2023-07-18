@@ -1,15 +1,16 @@
-
-    <div class="tc-article">
+<div class="tc-article">
         <header>
-        <span class="tc-post-meta"><?php echo get_the_author_posts_link(); ?> &nbsp; | &nbsp; <?php the_date( ); ?>
+            <?php the_title( '<h1 class="tc-headline">', '</h2>'); ?>
+			<p class="tc-post-meta"><?php echo get_the_author_posts_link(); ?> &nbsp; | &nbsp; <?php the_date( ); ?>
             &nbsp; | &nbsp; <?php
                         echo get_comments_number( );
                             if(get_comments_number() > 1){ echo ' Comments';
                         }else{
                             echo ' Comment';
                         } ?>
-        </span>
-            <?php the_title( '<h1 class="tc-headline">', '</h2>'); ?>
+        	</p>
+			<?php #the_excerpt(); ?>
+			<br>
             <?php the_post_thumbnail(); ?>
         </header>
 
@@ -18,22 +19,32 @@
                 the_content();
             ?>
         </article>
+		<br>
         <hr>
         <br>
-        <span class="tc-post-meta"> <?php the_tags('<div class="tc-tags"><span>In this article: </span>', ', ', '</div>') ?>
+        <span class="tc-post-meta"><?php the_tags('<div class="tc-tags"><strong>In this article: </strong>', ', ', '</div>') ?>
         </span>
         <br>
         <hr>
-        <?php the_widget( 'Techer_Share_Block', $instance=array(
-            'title' => '',
-            'label' => 'Share this on'
-        )); ?>
+        <?php 
+// 			the_widget( 'Techer_Share_Block', $instance=array(
+//             'title' => '',
+//             'label' => 'Share to')); 
+		?>
         <hr>
         <br>
         <div class="tc-article-post-nav">
-            <?php previous_post_link('<strong class="tc-post-nav left">%link</strong>') ?>
+			<div class="tc-article-post-nav-item">
+				<em>Previous</em> <br><br>
+				<?php previous_post_link('<strong class="tc-post-nav left">%link</strong>') ?>
+			</div>
+				
+			<div class="tc-article-post-nav-item" style="float:right;">
+				<em style="float:right;">Next</em> <br><br>
+				<?php next_post_link('<strong style="float:right;" class="tc-post-nav right">%link</strong>') ?>
+			</div>
         
-            <?php next_post_link('<strong class="tc-post-nav right">%link</strong>') ?>
+            
         </div>
         <br>
         <hr>
@@ -47,12 +58,15 @@
                 )); ?>
                
         <hr>
-    </div>
+		
+		<br><br>
 
     <div class="tc-comment">
-        <!-- <h3>Discussion</h3> -->
+        <h3 class="section-header">Discussion</h3>
         <?php if(comments_open( ) || get_comments_number(  )){
-            //comments_template();
+            comments_template('../comments.php');
         } ?>
     </div>
+    </div>
+
 

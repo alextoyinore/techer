@@ -18,17 +18,19 @@ Author URI: https://9african.live/about-us
 body {
     font-family: "NeueHaasGroteskText Pro", sans-serif;
     overflow-x: hidden;
+/* 	background: #F4E63733; */
 }
 
 hr {
     margin-top: .01rem;
     margin-bottom: .01rem;
-     opacity: .5;
+     opacity: .3;
+	border: .5px solid #ccc;
 }
 
 ul {
     display: block;
-    list-style-type: none;
+/*     list-style-type: none; */
     margin-block-start: 0;
     margin-block-end: 0;
     margin-inline-start: 0px;
@@ -37,7 +39,7 @@ ul {
 }
 
 li {
-    list-style: none;
+/*     list-style: none; */
 }
 
 blockquote {
@@ -72,7 +74,8 @@ input:focus, textarea:focus, select:focus{
 #header {
     width: 100%;
     border-bottom: 1px solid #aaa;
-    background: #fff;
+/*     background: #F4E63755; */
+	background: #fff;
     z-index: 1;
     position: fixed;
     left: 0;
@@ -142,6 +145,7 @@ input:focus, textarea:focus, select:focus{
     float: left;
     margin-right: 1rem;
     position: relative;
+	list-style: none;
 }
 
 #primary-nav-links ul li a{
@@ -162,6 +166,7 @@ input:focus, textarea:focus, select:focus{
 }
 
 #secondary-nav-links ul li{
+	list-style: none;
     float: left;
     margin-right: 1rem;
 }
@@ -279,9 +284,9 @@ input:focus, textarea:focus, select:focus{
 }
 
 .tc-excerpt {
-    font-size: .9rem;
-    line-height: 1.4rem;
-    color: #000;
+    font-size: .8rem;
+    line-height: 1.3rem;
+    color: #575757;
     margin-bottom: 1rem;
 }
 
@@ -425,7 +430,7 @@ input:focus, textarea:focus, select:focus{
 .tc-headline {
     font-size: 2.3rem;
     line-height: 2.9rem;
-    border: 1px solid #000;
+    border: .5px solid #ccc;
     padding: 1.4rem;
 }
 
@@ -433,24 +438,36 @@ input:focus, textarea:focus, select:focus{
     color: #555;
 }
 
-.tc-post-meta, .tc-post-meta{
+.tc-post-meta {
     text-decoration: none;
     color: #555;
     font-size: .8rem;
+	margin-bottom: 1rem;
 }
 
 .tc-article-post-nav {
     display: flex;
+	width: 100%;
+	align-content: space-between;
+}
+
+.tc-article-post-nav em{
+	font-size: .8rem;
+}
+
+.tc-article-post-nav .tc-article-post-nav-item{
+	width: 48%;
 }
 
 .tc-article-post-nav strong {
-    width: 50%;
+    width: 100%;
     /* border: 1px solid #000; 
     padding: 5px; */
 }
 
 .tc-article article p{
     font-size: 1rem;
+	color: #444;
     line-height: 1.9rem;
 }
 
@@ -463,11 +480,10 @@ input:focus, textarea:focus, select:focus{
 }
 
 .tc-article article blockquote {
-    border-top: 1px solid #888;
-    border-bottom: 1px solid #888;
-    text-align: center;
-    font-size: 2rem;
+    font-size: .9rem;
     font-style: oblique;
+	background: #efefef77;
+	padding: 2rem;
     /*background: #F4E63733;*/
 }
 
@@ -476,18 +492,22 @@ input:focus, textarea:focus, select:focus{
     color: #888;
 }
 
+.tc-article article ul {
+	font-size: .9rem;
+	background: #efefefaa;
+	padding: 2rem;
+}
+
 .tc-article article ul li {
-    list-style: none;
     color: #000;
-    font-size: 1rem;
     line-height: 1.9rem;
 }
 
 .tc-article article ul li a {
     color: #000;
-    /* font-style: italic; 
+    font-style: italic; 
     text-decoration-style: dotted; 
-    text-decoration-color: #aaa; */
+    text-decoration-color: #aaa;
     text-decoration: none;
     font-weight: 500;
     line-height: 2rem;
@@ -571,8 +591,8 @@ input:focus, textarea:focus, select:focus{
 /* Comments */
 
 .tc-comment {
-    width: 55%;
-    margin: auto;
+    width: 100%;
+/*     margin: auto; */
 }
 
 .vcard img {
@@ -589,7 +609,7 @@ input:focus, textarea:focus, select:focus{
     display: none;
 }
 
-.comments-title {
+/* .comments-title {
     border: 1px solid #000;
     padding: .3rem;
 }
@@ -611,11 +631,19 @@ input:focus, textarea:focus, select:focus{
 
 .comment-body .reply {
     font-size: small;
-}
+} */
 
 
 .wp-block-columns {
     margin-bottom: 0.75em;
+}
+
+.wp-block-image figcaption {
+  	font-size: .8rem;
+	background: #efefefaa;
+	font-style: italic;
+	padding: 1rem;
+	margin: 0;
 }
 
 /* Fixed top margin */
@@ -651,6 +679,26 @@ input:focus, textarea:focus, select:focus{
 .tc-social-share-label {
     /*font-weight: bold;*/
 }
+
+
+/* Comment section */
+
+#respond #comment-form-comment{
+	background: #efefef;
+	border: .5px solid #aeaeae;
+	box-shadow: 0;
+}
+
+
+/* Section Headers */
+
+.section-header{
+	width: 100%;
+	padding: 1rem 0rem;
+	text-align: center;
+	background: #efefef;
+}
+
 
 /* Techer Copyright */
 #tc-copyright{
