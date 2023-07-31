@@ -1,20 +1,24 @@
 <div class="tc-article">
         <header>
-            <?php the_title( '<h1 class="tc-headline">', '</h2>'); ?>
-			<p class="tc-post-meta"><?php echo get_the_author_posts_link(); ?> &nbsp; | &nbsp; <?php the_date( ); ?>
-            &nbsp; | &nbsp; <?php
+			<div id="tc-headline">
+				<?php the_title( '<h1 class="tc-headline">', '</h2>'); ?>
+				<p class="tc-post-meta">
+					<?php echo get_the_author_posts_link(); ?> &nbsp; | &nbsp; <?php the_date( ); ?>
+            			&nbsp; | &nbsp; 
+					<?php
                         echo get_comments_number( );
                             if(get_comments_number() > 1){ echo ' Comments';
                         }else{
                             echo ' Comment';
-                        } ?>
-        	</p>
-			<?php #the_excerpt(); ?>
+                        } ?> </p>
+			</div>
+            
+			<?php //the_excerpt('<em class="tc-excerpt">','</em>'); ?>
 			<br>
             <?php the_post_thumbnail(); ?>
         </header>
 
-        <article>
+        <article class="article-body">
             <?php
                 the_content();
             ?>
@@ -30,6 +34,7 @@
 // 			the_widget( 'Techer_Share_Block', $instance=array(
 //             'title' => '',
 //             'label' => 'Share to')); 
+            dynamic_sidebar('after-post');
 		?>
         <hr>
         <br>
@@ -39,12 +44,11 @@
 				<?php previous_post_link('<strong class="tc-post-nav left">%link</strong>') ?>
 			</div>
 				
-			<div class="tc-article-post-nav-item" style="float:right;">
+			<div class="tc-article-post-nav-item">
 				<em style="float:right;">Next</em> <br><br>
 				<?php next_post_link('<strong style="float:right;" class="tc-post-nav right">%link</strong>') ?>
 			</div>
-        
-            
+ 
         </div>
         <br>
         <hr>

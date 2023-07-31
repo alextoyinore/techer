@@ -25,8 +25,8 @@
     
 	<?php wp_head(); ?>
 	
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9628695355238680"
-     crossorigin="anonymous"></script>
+	<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9628695355238680"
+     crossorigin="anonymous"></script> -->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -36,9 +36,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div id="header">
     <nav class="tc-nav" id="techer-top-nav">
-        <div class="techer-menu-toggle">
-            <img id="techer-menu-icon-left" alt="techer-menu-icon" src="<?php echo get_template_directory_uri() . '/assets/images/techer-menu-icon-left.png';?>" />
-        </div>
         <div class="tc-site-brand">
             <?php
                 if(function_exists('the_custom_logo')){
@@ -79,14 +76,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 ); ?>
             </div>
 
-            <div class="techer-search-icon">
-                <img id="techer-search-icon" alt="techer search icon" src="<?php echo get_template_directory_uri() . '/assets/images/techer-search-icon.png';
-                ?>" />
-            </div>
-
         </div>
+		
+		<div class="techer-nav-right">
+                <img id="techer-search-icon" 
+					 alt="techer search icon" 
+					 src="<?php echo get_template_directory_uri() . '/assets/images/techer-search-icon.png';
+                ?>" />
+				
+				<div class="techer-menu-toggle">
+					<img id="techer-menu-icon" 
+						 alt="techer-menu-icon" 
+						 src="<?php echo get_template_directory_uri() . '/assets/images/techer-menu-icon-left.png';?>" />
+        		</div>
+            </div>
     </nav>
-    <?php get_search_form(); ?>
-    <?php get_template_part( 'template-parts/content', 'site-menu'); ?>
 </div>
+
+<?php get_search_form(); ?>
+<?php get_template_part( 'template-parts/content', 'site-menu'); ?>
 

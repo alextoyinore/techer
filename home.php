@@ -3,7 +3,7 @@
 ?>
 
 <br><br>
-    <article class="content">
+    <article class="content tc-article">
 
         <div class="tc-archive-grid">
             
@@ -27,7 +27,7 @@
                         
                         </p>
                         
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium') ?></a>
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
                         
                         </article>
 

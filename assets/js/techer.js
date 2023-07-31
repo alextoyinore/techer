@@ -16,12 +16,15 @@ const toggleVisibility = (trigger, content) => {
 
 /* Search form */
 
-toggleVisibility('.techer-search-icon', '#techer-search-form');
+toggleVisibility('#techer-search-icon', '#techer-search');
+toggleVisibility('#close-search', '#techer-search');
+
 
 /* Search form End */
 
 /*Big site nav */
 
-toggleVisibility('.techer-menu-toggle', '#techer-site-navigation');
+toggleVisibility('.techer-menu-toggle', '#techer-big-menu');
+toggleVisibility('#close-big-menu', '#techer-big-menu');
 
 /* Big Site Nav End */

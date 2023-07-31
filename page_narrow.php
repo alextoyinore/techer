@@ -8,7 +8,7 @@ Template Name: Narrow Page
 <?php get_header(); ?>
 
 <br><br>
-<article class="tc-article">
+<article id="page">
 
     <?php
     if(is_page()):
@@ -20,3 +20,7 @@ Template Name: Narrow Page
 <br><br>
 
 <?php get_footer(); ?>
+
+<style>
+	
+</style>

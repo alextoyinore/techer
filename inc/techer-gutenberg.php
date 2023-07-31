@@ -19,9 +19,9 @@
          ),
 
          array(
-            'name' => 'green',
-            'slug' => 'green',
-            'color' => '#3f8'
+            'name' => 'yellow',
+            'slug' => 'yellow',
+            'color' => '#ffd300'
         )
      ));
 
@@ -67,7 +67,7 @@
 
                     'offset' => [ 'type' => 'number', 'default' => 0],
 
-                    'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFF']
+                    'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFFFF']
              ]
          ]
      );
@@ -89,7 +89,7 @@
      //The Query
      $the_query = new WP_Query( array('category_name' => $terms, 'posts_per_page' => $number_of_posts, 'offset' => $offset) );
 
-     $content  .= '<section class="techer-column-block" style="padding: 1rem; background-color: '.$background_color.'; ">';
+     $content  .= '<section class="techer-column-block">';
 
      if(!empty($title)){
          $content .= '<h3>' . $title . '</h3><hr>';
@@ -105,104 +105,17 @@
 
              $categories = get_the_category();
              if(!empty($categories)){
-                 $content .= '<a class="tc-category more" href="'. site_url().'/category/'.strtolower($categories[0]->name) .'">'. strtoupper($categories[0]->name) .'</a><br>';
-             }
-
-             $content .= '<a class="tc-title" href="'.get_the_permalink().'">'.get_the_title().'</a>';
-
-             $content .= '</p></article><hr>';
-         }
-
-         $content .= '<section class="more"><a class="tc-category" href="'. site_url().'/category/'.strtolower($categories[0]->name) .'">MORE FROM '. strtoupper($categories[0]->name) .'</a> </section>';
-
-     }else {
-         $content .= 'No post matches your query';
-     }
-
-     /* Restore original Post Data */
-     wp_reset_postdata();
-
-     $content .= '</section><br><br>';
-
-     return $content;
- }
-
-
-/* Techer Column Block 2 */
- function techer_column_block_2(){
-     wp_enqueue_script(
-         'techer-column-block-2-js',
-         get_template_directory_uri()."/build/index.js",
-         array('wp-blocks', 'wp-components', 'wp-block-editor', 'wp-editor'),
-         filemtime(get_template_directory().'/build/index.js'));
-
-     register_block_type(
-         'techer/tc-column-block-2',
-         [
-             'editor-script' => 'techer-column-block-2-js',
-             'render_callback' => 'techer_column_block_2_render',
-
-             //custom-attributes
-             'attributes' => [
-                    'title' => [ 'type' => 'string', 'default' => ''],
-
-                    'terms' => [ 'type' => 'array', 'default' => []],
-
-                    'numberOfPosts' => [ 'type' => 'number', 'default' => 0],
-
-                    'offset' => [ 'type' => 'number', 'default' => 0],
-
-                    'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFF00']
-             ]
-         ]
-     );
- }
-
- add_action('init', 'techer_column_block_2');
-
- function techer_column_block_2_render ($attr): string
- {
-     $content = '';
-
-     $title = $attr['title'];
-     $terms = $attr['terms'];
-     $number_of_posts = $attr['numberOfPosts'];
-     $offset = $attr['offset'];
-     $background_color = $attr['backgroundColor'];
-
-
-     //The Query
-     $the_query = new WP_Query( array('category_name' => $terms, 'posts_per_page' => $number_of_posts, 'offset' => $offset) );
-
-     $content  .= '<section class="techer-column-block" style="padding: 1rem; background-color: '.$background_color.'; ">';
-
-     if(!empty($title)){
-         $content .= '<h3>' . $title . '</h3><hr>';
-     }
-
-     // The Loop
-     if ( $the_query->have_posts() ) {
-
-         while ( $the_query->have_posts()) {
-             $the_query->the_post();
-
-             $content .= '<article><p>';
-
-             $categories = get_the_category();
-             if(!empty($categories)){
-                 $content .= '<a class="tc-category more" href="'. site_url().'/category/'.strtolower($categories[0]->name) .'">'. strtoupper($categories[0]->name) .'</a><br>';
+                 $content .= '<a class="tc-category more" href="'. site_url().'/category/'.strtolower($categories[0]->name) .'">'. strtoupper($categories[0]->name) .'</a>';
              }
 			 
 			 $content .= '<div class="tc-column-block-row">';
 			 
-			 $content .= '<a class="tc-column-block-thumbnail" href="'.get_the_permalink().'">'.get_the_post_thumbnail().'</a>';
+			 $content .= '<a id="tc-column-block-thumbnail" href="'.get_the_permalink().'">'.get_the_post_thumbnail($post_id, 'thumbnail').'</a>';
 
              $content .= '<a class="tc-title" href="'.get_the_permalink().'">'.get_the_title().'</a></div>';
-
-             $content .= '</p></article><hr>';
          }
 
-         $content .= '<section class="more"><a class="tc-category" href="'. site_url().'/category/'.strtolower($categories[0]->name) .'">MORE FROM '. strtoupper($categories[0]->name) .'</a> </section>';
+         $content .= '<section style="margin-top:1rem;" class="more"><a class="tc-category" href="'. site_url().'/category/'.strtolower($categories[0]->name) .'">MORE FROM '. strtoupper($categories[0]->name) .'</a> </section>';
 
      }else {
          $content .= 'No post matches your query';
@@ -215,7 +128,6 @@
 
      return $content;
  }
-
 
 
 /* Techer List Block */
@@ -242,13 +154,14 @@ function techer_list_block(){
 
                 'offset' => [ 'type' => 'number', 'default' => 0],
 
-                'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFF']
+                'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFFFF']
             ]
         ]
     );
 }
 
 add_action('init', 'techer_list_block');
+
 
 function techer_list_block_render ($attr): string
 {
@@ -264,9 +177,7 @@ function techer_list_block_render ($attr): string
     //The Query
     $the_query = new WP_Query( array('category_name' => $terms, 'posts_per_page' => $number_of_posts, 'offset' => $offset) );
 
-    $content  .= '<section class="techer-list-block" style="padding: 1rem; background-color: '
-        .$background_color
-        .'; ">';
+    $content  .= '<section class="techer-list-block">';
 
     // The Loop
     if ( $the_query->have_posts() ) {
@@ -333,7 +244,7 @@ function techer_row_block_1(){
 
                 'offset' => [ 'type' => 'number', 'default' => 0],
 
-                'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFF']
+                'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFFFF']
             ]
         ]
     );
@@ -355,9 +266,7 @@ function techer_row_block_1_render ($attr): string
     //The Query
     $the_query = new WP_Query( array('category_name' => $terms, 'posts_per_page' => $number_of_posts, 'offset' => $offset) );
 
-    $content  .= '<section class="techer-row-block-1" style="padding: 1rem; background-color: '
-        .$background_color
-        .'; ">';
+    $content  .= '<section class="techer-row-block-1">';
 
     // The Loop
     if ( $the_query->have_posts() ) {
@@ -422,7 +331,7 @@ function techer_row_block_2(){
 
                 'offset' => [ 'type' => 'number', 'default' => 0],
 
-                'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFF']
+                'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFFFF']
             ]
         ]
     );
@@ -444,9 +353,7 @@ function techer_row_block_2_render ($attr): string
     //The Query
     $the_query = new WP_Query( array('category_name' => $terms, 'posts_per_page' => $number_of_posts, 'offset' => $offset) );
 
-    $content  .= '<section class="techer-row-block-2" style="padding: 1rem; background-color: '
-        .$background_color
-        .'; ">';
+    $content  .= '<section class="techer-row-block-2">';
 
     // The Loop
     if ( $the_query->have_posts() ) {
@@ -458,11 +365,12 @@ function techer_row_block_2_render ($attr): string
         $content .= '<article>';
 
         while ( $the_query->have_posts()) {
+			
             $the_query->the_post();
 
             $content .= '<p>';
 
-            $content .= get_the_post_thumbnail() . '<br>';
+            $content .= get_the_post_thumbnail($post_id, 'thumbnail') . '<br>';
 
             $categories = get_the_category();
 
@@ -471,7 +379,10 @@ function techer_row_block_2_render ($attr): string
                     ($categories[0]->name) .'">'. strtoupper($categories[0]->name) .'</a><br>';
             }
 
-            $content .= '<a class="tc-title" href="'.get_the_permalink().'">'.get_the_title().'</a><br>';
+            $content .= '<a class="tc-title" href="'.get_the_permalink().'">'.get_the_title().'</a><br><br>';
+			
+			$content .= '<a style="color:#757575; font-size: .8rem;" class="tc-excerpt" href="'
+				.get_the_permalink().'">'.get_the_excerpt().'</a><br>';
 
         }
         $content .= '</article>';
@@ -515,7 +426,7 @@ function techer_featured_block(){
 
                 'offset' => [ 'type' => 'number', 'default' => 0],
 
-                'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFF']
+                'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFFFF']
             ]
         ]
     );
@@ -537,9 +448,7 @@ function techer_featured_block_render ($attr): string
     //The Query
     $the_query = new WP_Query( array('category_name' => $terms, 'posts_per_page' => $number_of_posts, 'offset' => $offset) );
 
-    $content  .= '<section class="techer-featured-block-2" style="padding: 1rem; background-color: '
-        .$background_color
-        .'; ">';
+    $content  .= '<section class="techer-featured-block-2">';
 
     // The Loop
     if ( $the_query->have_posts() ) {
@@ -611,7 +520,7 @@ function techer_weather(){
 
                 'country' => ['type' => 'string'],
 
-                'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFF']
+                'backgroundColor' => ['type' => 'string', 'default' => '#FFFFFFFF']
             ]
         ]
     );
@@ -629,9 +538,7 @@ function techer_weather_render ($attr): string
     $background_color = $attr['backgroundColor'];
 
 
-    $content  .= '<section class="techer-weather" style="padding: 1rem; background-color: '
-        .$background_color
-        .'; ">';
+    $content  .= '<section class="techer-weather">';
 
     $city    = $the_city;
     $country = $the_country;

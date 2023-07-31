@@ -38,23 +38,23 @@ add_action('after_setup_theme', 'techer_theme_support');
 
 function techer_widgets_init() {
     register_sidebar( array(
-        'name'          => 'Techer Frontpage',
+        'name'          => 'TC Frontpage',
         'id'            => 'front-page',
     ) );
 
     register_sidebar( array(
-        'name' => 'Widgetized Page Content',
-        'id' => 'widgetized-page-content',
+        'name' => 'TC Widgetized Page',
+        'id' => 'widgetized-page',
     ) );
 
     register_sidebar( array(
-        'name' => 'After Post Content',
-        'id' => 'after-post-content'
+        'name' => 'TC After Post',
+        'id' => 'after-post'
     ) );
 
     register_sidebar( array(
-        'name' => 'Archive Areas',
-        'id' => 'archive-areas'
+        'name' => 'TC Archive',
+        'id' => 'archive'
     ) );
 }
 
@@ -125,5 +125,8 @@ function techer_menus(){
 
 add_action( 'init', 'techer_menus' );
 
- 
 
+// function techer_excerpt_length( $length ) {
+//     return 20;
+// }
+// add_filter( 'excerpt_length', 'techer_excerpt_length', 999 );
