@@ -419,6 +419,10 @@
 
 
     /* Techer Row Block 2 */
+	
+	.techer-row-block-2 article{
+		gap: 4%;
+	}
 
     .techer-row-block-2 article p{
 		min-width: 48%;
@@ -565,6 +569,25 @@
     /* Techer Copyright */
     #tc-copyright{
         width: 95%;
+    }
+	
+	.techer-list-block article{
+		display: grid;
+		grid-template-columns: 100%;
+	}
+	
+	.techer-list-block article p{
+		min-width: 100%;
+		max-width: 100%;
+    }
+	
+	.techer-list-block article img{
+		display: none;
+	}
+	
+	.techer-row-block-2 article p{
+		min-width: 100%;
+		max-width: 100%;
     }
 
     .techer-featured-block-2 article img {

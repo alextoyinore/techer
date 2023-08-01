@@ -496,13 +496,12 @@ input:focus, textarea:focus, select:focus{
     display: flex;
     flex-wrap: wrap;
 	justify-content: flex-start;
-	gap: 1.65rem;
+	gap: 2.65%;
 }
 
 .techer-row-block-2 article p{
 	min-width: 23%;
 	max-width: 23%;
-	gap: .5rem;
 }
 
 .techer-row-block-2 article p img{
