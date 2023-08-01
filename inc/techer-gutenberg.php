@@ -95,7 +95,7 @@
          $content .= '<h3>' . $title . '</h3><hr>';
      }
 
-     $count = $number_of_posts
+     $count = $number_of_posts;
 
      // The Loop
      if ( $the_query->have_posts() ) {

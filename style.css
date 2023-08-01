@@ -119,7 +119,7 @@ input:focus, textarea:focus, select:focus{
     grid-template-columns: auto auto;
     column-gap: 2rem;
     border: none;
-    padding: 0.5rem;
+    padding: 0.75rem;
     align-items: center;
     clear: both;
 }
@@ -495,7 +495,8 @@ input:focus, textarea:focus, select:focus{
 .techer-row-block-2 article {
     display: flex;
     flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
+	gap: 1.65rem;
 }
 
 .techer-row-block-2 article p{
