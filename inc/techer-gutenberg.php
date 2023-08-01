@@ -95,10 +95,15 @@
          $content .= '<h3>' . $title . '</h3><hr>';
      }
 
+     $count = $number_of_posts
+
      // The Loop
      if ( $the_query->have_posts() ) {
 
          while ( $the_query->have_posts()) {
+
+            $count -= 1;
+
              $the_query->the_post();
 
              $content .= '<article><p>';
@@ -113,6 +118,12 @@
 			 $content .= '<a id="tc-column-block-thumbnail" href="'.get_the_permalink().'">'.get_the_post_thumbnail($post_id, 'thumbnail').'</a>';
 
              $content .= '<a class="tc-title" href="'.get_the_permalink().'">'.get_the_title().'</a></div>';
+
+             /* if($count != 0){
+				 $content .= '<br><hr>';
+			 } */
+			 
+			 $content .= '<br><hr>';
          }
 
          $content .= '<section style="margin-top:1rem;" class="more"><a class="tc-category" href="'. site_url().'/category/'.strtolower($categories[0]->name) .'">MORE FROM '. strtoupper($categories[0]->name) .'</a> </section>';

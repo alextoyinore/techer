@@ -2,10 +2,10 @@
 Theme Name: Techer
 Text Domain: techer
 Version: 1.2
-Description: Gutenberg Blocks-based, versatile magazine theme for news, science, lifestyle, and more. You can build pages using in-built blocks. No need for a plugin
+Description: Gutenberg Block-based, versatile magazine theme for news, science, lifestyle, and more. You can build pages using in-built blocks. No need for a plugin
 Tag: news, magazine, gutenberg, responsive
 Author: Alexander Ore
-Author URI: https://9african.com/about-us
+Author URI: https://9african.com/about
 */
 
 @font-face {
@@ -433,6 +433,7 @@ input:focus, textarea:focus, select:focus{
     margin-top: 1.5rem;
     object-fit: cover;
     max-height: 16rem;
+    border-radius: .5rem;
 }
 
 /* End Techer List Block*/
