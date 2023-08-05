@@ -15,21 +15,21 @@ Author URI: https://9african.com/about
     url("/assets/fonts/Neue-Haas-Grotesk-Pro-Rg.ttf");
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: "NeueHaasGroteskText Pro", sans-serif;
     overflow-x: hidden;
-/* 	background: #F4E63733; */
-}
-
-:where(.wp-block-columns.is-layout-flex) {
-    /*gap: 0em;*/
 }
 
 hr {
     margin-top: .01rem;
     margin-bottom: .01rem;
     opacity: .5;
-	border: .5px solid #ccc;
+	border: .5px solid hsl(0, 0%, 80%);
 }
 
 ul {
@@ -48,7 +48,7 @@ li {
 .article-body ul li{
 	list-style: disc;
 	line-height: 1.8rem;
-	color: #333;
+	color: hsl(0, 0%, 20%);
 }
 
 .sub-menu{
@@ -71,7 +71,7 @@ a{
 }
 
 article a {
-    color: #000;
+    color: hsl(0, 0%, 0%);
 }
 
 a:hover {
@@ -80,8 +80,8 @@ a:hover {
 }
 
 ::selection{
-    background: #FFDE17;
-    color: #000;
+    background: hsl(51, 100%, 55%);
+    color: hsl(0, 0%, 0%);
 }
 
 input:focus, textarea:focus, select:focus{
@@ -90,9 +90,9 @@ input:focus, textarea:focus, select:focus{
 
 #header {
     width: 100%;
-    border-bottom: 1px solid #dedede;
+    border-bottom: 1px solid hsl(0, 0%, 87%);
 /*     background: #F4E63755; */
-	background: #fff;
+	background: hsl(0, 0%, 100%);
     z-index: 1;
     position: fixed;
     left: 0;
@@ -107,7 +107,7 @@ input:focus, textarea:focus, select:focus{
 }
 
 .tc-site-title {
-    color: #000;
+    color: hsl(0, 0%, 0%);
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -135,7 +135,7 @@ input:focus, textarea:focus, select:focus{
 }
 
 #primary-nav-links ul ul {
-    background: #000;
+    background: hsl(0, 0%, 0%);
     opacity: .8;
     padding: .3rem;
 }
@@ -153,7 +153,7 @@ input:focus, textarea:focus, select:focus{
 }
 
 #primary-nav-links ul ul li a{
-    color: #fff;
+    color: hsl(0, 0%, 100%);
     line-height: 1.5rem;
 	padding-top: 1rem;
 	padding-left: 1rem;
@@ -171,7 +171,7 @@ input:focus, textarea:focus, select:focus{
 }
 
 #primary-nav-links ul li a{
-    color: #000;
+    color: hsl(0, 0%, 0%);
     text-decoration: none;
 }
 
@@ -194,7 +194,7 @@ input:focus, textarea:focus, select:focus{
 }
 
 #secondary-nav-links ul li a{
-    color: #000;
+    color: hsl(0, 0%, 0%);
     text-decoration: none;
 }
 
@@ -211,7 +211,7 @@ input:focus, textarea:focus, select:focus{
 	display: none;
 	width: 100%;
 	height: 100%;
-	background: #0007;
+	background: hsla(0, 0%, 0%, 0.467);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -226,7 +226,7 @@ input:focus, textarea:focus, select:focus{
 	height: 100%;
     display: grid;
 	padding: 2rem;
-	background: #222;
+	background: hsl(0, 0%, 13%);
 }
 
 #techer-site-navigation #site-nav-content{
@@ -249,13 +249,13 @@ input:focus, textarea:focus, select:focus{
 }
 
 #techer-site-navigation #site-nav-content div li a{
-    color: #fff;
+    color: hsl(0, 0%, 100%);
     font-size: 1rem;
 	font-weight: bold;
 }
 
 #techer-site-navigation #site-nav-content div ul li a{
-    color: #777;
+    color: hsl(0, 0%, 47%);
     font-size: .9rem;
 }
 
@@ -286,7 +286,7 @@ input:focus, textarea:focus, select:focus{
 	width:100%; 
 	height:100%; 
 	z-index: 3;
-	background: #0007;
+	background: hsla(0, 0%, 0%, 0.467);
 	transition: width 2s height 2s tranform 2s;
 	animation-timing-function: ease-in-out;
 }
@@ -298,14 +298,14 @@ input:focus, textarea:focus, select:focus{
 
 #close-search, #close-big-menu{
 	font-size: .7rem;
-	color: #777;
+	color: hsl(0, 0%, 47%);
 	cursor: pointer;
 	text-align: right;
 }
 
 #techer-search-form {
     width: 100%;
-    background: #222;
+    background: hsl(0, 0%, 13%);
 	height: 30%;
 	border-bottom-left-radius: .5rem;
 	border-bottom-right-radius: .5rem;
@@ -314,18 +314,18 @@ input:focus, textarea:focus, select:focus{
 #techer-search-input {
     width: 60%;
 	margin: 10vh 20%;
-    border: 1px solid #555;
+    border: 1px solid hsl(0, 0%, 33%);
     font-size: 1rem;
 	font-weight: bold;
     line-height: 1.5rem;
-	background: #222;
+	background: hsl(0, 0%, 13%);
     padding: 1rem;
-    color: #efefef;
+    color: hsl(0, 0%, 94%);
 	border-radius: .3rem;
 }
 
 .techer-input::placeholder {
-    color: #efefef;
+    color: hsl(0, 0%, 94%);
 	font-weight: bold;
 }
 
@@ -367,7 +367,7 @@ input:focus, textarea:focus, select:focus{
 .tc-title {
     font-size: 1rem;
 	text-decoration: none;
-	color: #000;
+	color: hsl(0, 0%, 0%);
 	font-weight: bold;
 	line-height: 1.3rem;
 }
@@ -375,21 +375,20 @@ input:focus, textarea:focus, select:focus{
 .tc-excerpt {
     font-size: 1rem;
     line-height: 1rem;
-    color: #575757;
+    color: hsl(0, 0%, 34%);
     margin-bottom: 1rem;
 	max-height: 2rem;
-	overflow-style: ellipsis;
 	font-family: Georgia,Times,serif;
 }
 
 .tc-author {
     text-decoration: none;
-    color: #888;
+    color: hsl(0, 0%, 53%);
 }
 
 .tc-time {
     text-decoration: none;
-    color: #555;
+    color: hsl(0, 0%, 33%);
     font-size: .6rem;
 }
 
@@ -450,7 +449,7 @@ input:focus, textarea:focus, select:focus{
 
 .tc-category {
     text-decoration: none;
-    color: #888;
+    color: hsl(0, 0%, 53%);
     font-size: .9rem;
 }
 
@@ -481,7 +480,7 @@ input:focus, textarea:focus, select:focus{
 .small {
    text-decoration: none;
    font-size: 14px;
-   color: #000;
+   color: hsl(0, 0%, 0%);
    line-height: 12px;
 }
 
@@ -533,7 +532,7 @@ input:focus, textarea:focus, select:focus{
 
 .techer-featured-block-2 article .title{
     text-decoration: none;
-    color: #000;
+    color: hsl(0, 0%, 0%);
     font-size: 2rem;
     font-weight: bold;
     line-height: 2.5rem;
@@ -553,7 +552,7 @@ input:focus, textarea:focus, select:focus{
 }
 
 #tc-headline{
-	border: .5px solid #ccc;
+	border: .5px solid hsl(0, 0%, 80%);
     padding: 1.4rem;
 	border-radius: .3rem;
 }
@@ -564,12 +563,12 @@ input:focus, textarea:focus, select:focus{
 }
 
 .tc-tags a{
-    color: #555;
+    color: hsl(0, 0%, 33%);
 }
 
 .tc-post-meta {
     text-decoration: none;
-    color: #555;
+    color: hsl(0, 0%, 33%);
     font-size: .8rem;
 	margin-bottom: 1rem;
 }
@@ -596,7 +595,7 @@ input:focus, textarea:focus, select:focus{
 
 .tc-article article p{
     font-size: 1.2rem;
-	color: #444;
+	color: hsl(0, 0%, 27%);
 }
 
 .tc-article .article-body p {
@@ -606,41 +605,41 @@ input:focus, textarea:focus, select:focus{
 
 
 .tc-article article p a {
-    color: #000;
+    color: hsl(0, 0%, 0%);
     font-style: bold;
     text-decoration-style: dotted;
-    text-decoration-color: #aaa;
+    text-decoration-color: hsl(0, 0%, 67%);
 }
 
 .tc-article article blockquote {
     font-size: .9rem;
     font-style: oblique;
-	background: #efefef77;
+	background: hsla(0, 0%, 94%, 0.467);
 	padding: 2rem;
     /*background: #F4E63733;*/
 }
 
 .tc-article article cite {
     font-size: .8rem;
-    color: #888;
+    color: hsl(0, 0%, 53%);
 }
 
 .tc-article article ul {
 	font-size: .9rem;
-	background: #efefefaa;
+	background: hsla(0, 0%, 94%, 0.667);
 	padding: 2rem;
 }
 
 .tc-article article ul li {
-    color: #000;
+    color: hsl(0, 0%, 0%);
 /*     line-height: 1.8rem; */
 }
 
 .tc-article article ul li a {
-    color: #000;
+    color: hsl(0, 0%, 0%);
     font-style: italic; 
     text-decoration-style: dotted; 
-    text-decoration-color: #aaa;
+    text-decoration-color: hsl(0, 0%, 67%);
     text-decoration: none;
     font-weight: 500;
     line-height: 2rem;
@@ -651,7 +650,7 @@ input:focus, textarea:focus, select:focus{
 
 .tc-post-nav a{
     text-decoration: none;
-    color: #000;
+    color: hsl(0, 0%, 0%);
     line-height: 1.5rem;
 }
 
@@ -708,7 +707,7 @@ input:focus, textarea:focus, select:focus{
 
 .more, .more a{
     font-size: .7rem;
-    color: #000;
+    color: hsl(0, 0%, 0%);
 }
 
 .more {
@@ -740,7 +739,7 @@ input:focus, textarea:focus, select:focus{
 
 .wp-block-image figcaption {
   	font-size: .8rem;
-	background: #efefefaa;
+	background: hsla(0, 0%, 94%, 0.667);
 	font-style: italic;
 	padding: 1rem;
 	margin: 0;
@@ -754,7 +753,7 @@ input:focus, textarea:focus, select:focus{
 
 /* Techer Weather */
 .techer-weather {
-    color: #888;
+    color: hsl(0, 0%, 53%);
     font-size: .9rem;
 }
 
@@ -771,21 +770,14 @@ input:focus, textarea:focus, select:focus{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     row-gap: .5rem;
-    color: #555;
+    color: hsl(0, 0%, 33%);
 }
-
-.tc-social-share div a{}
-
-.tc-social-share-label {
-    /*font-weight: bold;*/
-}
-
 
 /* Comment section */
 
 #respond #comment-form-comment{
-	background: #efefef;
-	border: .5px solid #aeaeae;
+	background: hsl(0, 0%, 94%);
+	border: .5px solid hsl(0, 0%, 68%);
 	box-shadow: 0;
 }
 
@@ -796,7 +788,7 @@ input:focus, textarea:focus, select:focus{
 	width: 100%;
 	padding: 1rem 0rem;
 	text-align: center;
-	background: #efefef;
+	background: hsl(0, 0%, 94%);
 }
 
 .page-content{
@@ -813,7 +805,7 @@ input:focus, textarea:focus, select:focus{
 
 #page p{
 	font-size: 1rem;
-	color: #555;
+	color: hsl(0, 0%, 33%);
 	line-height: 1.5rem;
 	font-family: Georgia,Times,serif;
 }
@@ -835,7 +827,7 @@ a[rel='author'] {
 
 #reply-title{
 	text-align: center;
-	color: #777;
+	color: hsl(0, 0%, 47%);
 	font-size: 1rem;
 	line-height: 1.2rem;
 	padding: 0 2rem;
@@ -852,7 +844,7 @@ a[rel='author'] {
 /* Techer Copyright */
 #tc-copyright{
     font-size: .8rem;
-    color: #555;
+    color: hsl(0, 0%, 33%);
     width: 55%;
     margin: auto;
 }
